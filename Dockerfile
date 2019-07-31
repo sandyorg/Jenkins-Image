@@ -8,6 +8,6 @@ WORKDIR /jenkins
 ADD . /jenkins
 
 #Give permission to execute install_jenkins.sh file
-RUN chmod +x ./install_jenkins.sh
+RUN chmod +x ./Image.sh
 
-ENTRYPOINT ["install_jenkins.sh"]
+ENTRYPOINT ["Image.sh"]
