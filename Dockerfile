@@ -1,6 +1,12 @@
 #Pull a ubuntu image of version 18.10
 FROM ubuntu:18.10
 
+#Maintainer of this docker build
+MAINTAINER sandeep
+
+#User to build this image
+#USER docker
+
 #Set the WORKDIR
 WORKDIR /jenkins
 
@@ -10,4 +16,6 @@ ADD . /jenkins
 #Give permission to execute install_jenkins.sh file
 RUN chmod +x ./Image.sh
 
-ENTRYPOINT ["Image.sh"]
+EXPOSE 8080
+
+ENTRYPOINT ["./Image.sh"]
